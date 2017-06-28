@@ -3,8 +3,11 @@ package com.example.mcnight.scroll_question;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.graphics.Color;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +28,16 @@ public class MainActivity extends AppCompatActivity {
 
         final TextView t_pink = (TextView) findViewById(R.id.b_pink);
 
+        final CheckBox t_check = (CheckBox) findViewById(R.id.check_this);
+
+        RadioButton t_radio = (RadioButton) findViewById(R.id.click_me);
+
+        if (t_check.isChecked()) {
+
+            Toast.makeText(this, "Hi You", Toast.LENGTH_SHORT).show();
+
+        }
+
         t_red.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         t_green.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                       t_green.setBackgroundResource(R.color.green);
+                t_green.setBackgroundResource(R.color.green);
 
             }
         });
